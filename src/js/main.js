@@ -1,3 +1,7 @@
+$(window).on("load", function(){
+    $(".load-page").fadeOut("slow");
+});
+
 $(".dropbar-header").css("top", "-3000px").css("position", "absolute");
 
 $('div#list_navbar li').click(function(){
