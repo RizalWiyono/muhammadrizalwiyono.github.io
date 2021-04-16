@@ -77,6 +77,15 @@ body {
     font-family: "AmpleSoft Pro";
 }
 
+.load-page {
+    width: 100%;
+    height: 20000px;
+    background-color: #fff;
+    z-index: 99999;
+    position: absolute;
+    top: 0;
+}
+
 @media (max-width: 768px) { 
     .container {
         max-width: 576px;
