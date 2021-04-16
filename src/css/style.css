@@ -74,665 +74,935 @@
 
 body {
     margin: 0;
+    font-family: "AmpleSoft Pro";
 }
 
-@media (max-width: 650px) { 
-    /* Header */
-
-    header {
-        width: 100%;
-        height: 90px; 
-        position: fixed;
+@media (max-width: 768px) { 
+    .container {
+        max-width: 576px;
+        height: 20000px;
     }
-
-    .header-content {
-        width: 100%;
-        height: 30px; 
-        background-color: white; 
-        border-radius: 0 0 10px 10px; 
-        box-shadow: 0px 2px 10px rgb(0, 0, 0, 20%);
-        display: flex;
-        position: fixed;
+    
+    .box_layout {
+        box-shadow: 0 0 50px rgb(0 0 0 / 20%);
+    }
+    
+    .header_section {
+        box-shadow: 0 2px 10px rgb(0 0 0 / 20%);
+        border-radius: 0 0 12px 12px;
+        position: relative;
+        padding: 0 20px;
         z-index: 2;
     }
 
-    .header-content .logo-place {
-        width: 42%;
+    .logo_header img {
+        display: none;
+    }
+    
+    .logo_header .logo_name {
+        font-family: "AmpleSoft Pro";
+        margin-top: -10px;
+    }
+    
+    .logo_header .logo_name span {
+        font-size: 14px;
+        color: #707070;
+        font-weight: 400;
+        text-transform: uppercase;
+        display: inline-block;
+        margin: 12px 0 0 10px;
+        letter-spacing: 1px;
+        line-height: 17px;
+    }
+    
+    .logo_header .logo_name .inner_name {
+        font-size: 12px;
+        color: #71B9AD;
+        margin: 0;
     }
 
-    .header-content .logo-place img {
-        margin: 4px 20px;
-        width: 45px;
-        content: url("../images/LOGO-2.svg");
-    }
-
-    .header-content .link-nav-place  {
-        width: 58%;
+    .nav_menu_header_mobile {
         display: flex;
+        width: 25%;
     }
 
-    .header-content .btn-close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        width: 17px;
-        height: 17px;
-        border-radius: 500px;
-        border: 0;
-        background-color: #F5F5F5;
+    .nav_menu_header_mobile li {
+        list-style: none;
+        text-transform: uppercase;
+        display: flex;
+        height: auto;
+        justify-content: space-between;
+    }
+    
+    .nav_menu_header_mobile li a {
+        font-family: "AmpleSoft Pro";
+        font-size: 16px;
+        line-height: 25px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #868686;
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+    
+    .nav_menu_header_mobile li a:hover {
+        font-weight: bold;
+        color: #71B9AD;
+    }
+    
+    .nav_menu_header_mobile li span {
+        margin-left: 6px;
+        align-items: center;
+        height: auto;
+    }
+    
+    .nav_menu_header_mobile li span img {
+        width: 25px;
+        margin-top: -2px;
+        transition: all 0.3s !important;
         cursor: pointer;
-        outline: none;
-
-        font-weight: 600 !important;
-        font-size: 8px !important;
-        color: #868686 !important;
     }
 
-    .header-content .btn-menu {
-        background-color: transparent;
-        border: 0;
+    .nav_menu_header_mobile li img {
         cursor: pointer;
-        outline: none;
+    }
+    
+    .nav_menu_header_mobile .login-section span img {
+        width: 20px;
         margin-top: -2px;
     }
-
-    .header-content .btn-menu img {
-        width: 14px;
-    }
-
-    .header-content .btn-login {
-        background-color: transparent;
-        border: 0;
-        margin-right: 10px;
-        cursor: pointer;
-        outline: none;
-    }
-
-    .header-content .btn-login img {
-        width: 12px;
-        margin-top: 2px;
-    }
-
-    .header-content .link-nav-place .side-menu-mobile {
-        position: absolute;
-        top: 0;
-        margin: 0;
-        right: -300px;
-        width: 100px;
-        height: 180px;
-        background-color: white;
-        box-shadow: 0px 2px 10px rgb(0, 0, 0, 20%);
-        border-bottom-left-radius: 6px;
-        padding-top: 70px;
-        list-style-type:none;
-    }
-
-    .header-content .link-nav-place .side-menu {
-        display: none;
-    }
-
-    .header-content .link-nav-place ul li {
-        font-family: "AmpleSoft Pro";
-        font-weight: 500;
-        font-size: 8px;
-        color: #868686;
-        padding-top: 8px;
-        letter-spacing: 1px;
-        cursor: pointer;
-        margin-left: -10px;
-    }
-
-    .header-content .link-nav-place ul li:hover {
-        font-weight: bold;
-        color: #71B9AD;
-    }
-
-    .list-active {
-        font-family: "AmpleSoft Pro" !important;
-        font-weight: 600 !important;
-        font-size: 16px !important;
-        color: #71B9AD !important;
-        padding-top: 34px !important;
-        padding-bottom: 34px !important;
-        letter-spacing: 1px !important;
-        cursor: pointer !important;
-    }
-
-    .header-content hr {
-        margin: 7px 6px 7px 6px;
-        width: 1px;
-        background-color: #F4F4F9;
-        border: 0;
-    }
-
-    /* Dropbar Header */
-
-        .dropbar-header {
-            width: 53%;
-            background-color: white; 
-            border-radius: 0 0 10px 10px; 
-            box-shadow: 0px 2px 10px rgb(0, 0, 0, 20%);
-            position: absolute;
-            top: -300px;
-            display: flex;
-            justify-content: space-between;
-            padding-left: 35%;
-            padding-right: 12%;
-            padding-bottom: 2%;
-        }
-
-        .side-content-dropbar {
-            margin-top: 40px;
-        }
-        
-        .dropbar-header .title-side-content {
-            font-family: "AmpleSoft Pro";
-            font-weight: 500;
-            font-size: 16px;
-            color: #464646; 
-        }
-
-        .dropbar-header hr {
-            height: 3px;
-            width: 70px;
-            background-color: #F4F4F9;
-            border: 0; 
-            margin-bottom: 11px;
-        }
-
-        .dropbar-header li {
-            list-style-type:none;
-            text-align: center;
-            margin-bottom: 11px;
-            
-            font-family: "AmpleSoft Pro";
-            font-weight: 300;
-            font-size: 14px;
-            color: #464646;     
-        }
-}
-
-@media (min-width: 768px) { 
-    /* Header */
-
-    header {
-        width: 100%;
-        height: 90px; 
-        position: fixed;
-    }
-
-    .header-content {
-        width: 100%;
-        height: 60px; 
-        background-color: white; 
-        border-radius: 0 0 10px 10px; 
-        box-shadow: 0px 2px 10px rgb(0, 0, 0, 20%);
-        display: flex;
-        position: fixed;
-        z-index: 2;
-    }
-
-    .header-content .logo-place {
-        width: 42%;
-    }
-
-    .header-content .logo-place img {
-        margin: 12px 20px;
-        width: 75px;
-        content: url("../images/LOGO-2.svg");
-    }
-
-    .header-content .link-nav-place  {
-        width: 58%;
-        display: flex;
-    }
-
-    .header-content .btn-close {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        width: 25px;
+    
+    .nav_menu_header_mobile li hr {
+        width: 2px;
         height: 25px;
-        border-radius: 500px;
-        border: 0;
-        background-color: #F5F5F5;
-        cursor: pointer;
-        outline: none;
-
-        font-weight: 600 !important;
-        font-size: 14px !important;
-        color: #868686 !important;
-    }
-
-    .header-content .btn-menu {
-        background-color: transparent;
-        border: 0;
-        cursor: pointer;
-        outline: none;
-    }
-
-    .header-content .btn-menu img {
-        width: 20px;
-        margin-top: 2px;
-        outline: none;
-    }
-
-    .header-content .btn-login {
-        background-color: transparent;
-        border: 0;
-        margin-right: 20px;
-        cursor: pointer;
-    }
-
-    .header-content .btn-login img {
-        width: 15px;
-        margin-top: 2px;
-    }
-
-    .header-content .link-nav-place .side-menu-mobile {
-        position: absolute;
-        top: 0;
-        margin: 0;
-        right: -300px;
-        width: 200px;
-        height: 350px;
-        background-color: white;
-        box-shadow: 0px 2px 10px rgb(0, 0, 0, 20%);
-        border-bottom-left-radius: 6px;
-        padding-top: 70px;
-        list-style-type:none;
-    }
-
-    .header-content .link-nav-place .side-menu {
-        display: none;
-    }
-
-    .header-content .link-nav-place ul li {
-        font-family: "AmpleSoft Pro";
-        font-weight: 500;
-        font-size: 12px;
-        color: #868686;
-        padding-top: 24px;
-        letter-spacing: 1px;
-        cursor: pointer;
-    }
-
-    .header-content .link-nav-place ul li:hover {
-        font-weight: bold;
-        color: #71B9AD;
-    }
-
-    .list-active {
-        font-family: "AmpleSoft Pro" !important;
-        font-weight: 600 !important;
-        font-size: 16px !important;
-        color: #71B9AD !important;
-        padding-top: 34px !important;
-        padding-bottom: 34px !important;
-        letter-spacing: 1px !important;
-        cursor: pointer !important;
-    }
-
-    .header-content hr {
-        margin: 10px 10px 10px 10px;
-        width: 3px;
         background-color: #F4F4F9;
-        border: 0;
     }
 
-    /* Dropbar Header */
-
-        .dropbar-header {
-            width: 53%;
-            background-color: white; 
-            border-radius: 0 0 10px 10px; 
-            box-shadow: 0px 2px 10px rgb(0, 0, 0, 20%);
-            position: absolute;
-            top: -300px;
-            display: flex;
-            justify-content: space-between;
-            padding-left: 35%;
-            padding-right: 12%;
-            padding-bottom: 2%;
-        }
-
-        .side-content-dropbar {
-            margin-top: 40px;
-        }
-        
-        .dropbar-header .title-side-content {
-            font-family: "AmpleSoft Pro";
-            font-weight: 500;
-            font-size: 16px;
-            color: #464646; 
-        }
-
-        .dropbar-header hr {
-            height: 3px;
-            width: 70px;
-            background-color: #F4F4F9;
-            border: 0; 
-            margin-bottom: 11px;
-        }
-
-        .dropbar-header li {
-            list-style-type:none;
-            text-align: center;
-            margin-bottom: 11px;
-            
-            font-family: "AmpleSoft Pro";
-            font-weight: 300;
-            font-size: 14px;
-            color: #464646;     
-        }
-}
-
-@media (min-width: 992px) { 
-    /* Header */
-
-    header {
-        width: 100%;
-        height: 90px; 
-        position: fixed;
-    }
-
-    .header-content {
-        width: 100%;
-        height: 70px; 
-        background-color: white; 
-        border-radius: 0 0 10px 10px; 
-        box-shadow: 0px 2px 10px rgb(0, 0, 0, 20%);
+    .menu_header_mobile {
         display: flex;
-        position: fixed;
-        z-index: 2;
+        top: 0px !important;
+        position: absolute !important;
+        left: -300px;
+        width: 200px !important;
+        height: 432px;
+        background-color: #fff !important;
+        overflow: hidden;
+        z-index: 5;
     }
 
-    .header-content .logo-place {
-        width: 38%;
-    }
-
-    .header-content .logo-place img {
-        margin: 15px 45px;
-        width: 115px;
-        content: url("../images/LOGO.svg");
-    }
-
-    .header-content .link-nav-place  {
-        width: 62%;
-    }
-
-    .header-content .link-nav-place .side-menu {
+    .menu_header_mobile .container_menu_header_mobile {
+        z-index: 5;
+        position: absolute;
+        width: 5000px !important;
+        height: 432px;
         display: flex;
-        justify-content: space-between;
-        list-style-type:none;
-        padding-right: 65px;
-        margin: 0;
-        width: 100%;
     }
 
-    .header-content .link-nav-place .side-menu-mobile {
-        display: none;
+    .menu_header_mobile ul {
+        list-style: none;
+        padding: 0;
+        width: 200px;
+        text-transform: uppercase;
     }
 
-    .header-content .link-nav-place .side-menu li {
+    .menu_header_mobile ul li {
+        padding: 6% 9% 0 9%;
         font-family: "AmpleSoft Pro";
+        font-size: 14px;
         font-weight: 500;
+        text-transform: uppercase;
+        color: #868686;
+        cursor: pointer;
+    }
+
+    .menu_header_mobile ul li:hover {
+        font-size: 14px;
+        color: #71B9AD !important;
+        transition: all 0.3s;
+    }
+
+    .menu_header_mobile ul .close_section i {
+        font-size: 20px;
+        color: #868686;
+        float: left;
+        margin-top: -4px !important;
+        margin-right: 4px !important;
+    }
+
+    .menu_header_mobile ul .back_section i {
         font-size: 11px;
         color: #868686;
-        padding-top: 27px;
-        padding-bottom: 27px;
-        letter-spacing: 1px;
-        cursor: pointer;
+        float: left;
+        margin-top: 3px !important;
+        margin-right: 4px !important;
     }
 
-    .header-content .btn-close {
-        display: none;
+    .menu_header_mobile ul .option_nav {
+        font-weight: 400 !important;
+        text-transform: capitalize;
     }
 
-    .header-content .btn-menu {
-        display: none;
-    }
-
-    .header-content .btn-login {
-        display: none;
-    }
-
-    .header-content .line-mobile {
-        display: none;
-    }
-
-    .header-content .link-nav-place .side-menu li:hover {
-        font-weight: bold;
-        color: #71B9AD;
-    }
-
-    .list-active {
-        font-family: "AmpleSoft Pro" !important;
-        font-weight: 600 !important;
-        font-size: 11px !important;
-        color: #71B9AD !important;
-        letter-spacing: 1px !important;
-        padding-top: 27px !important;
-        padding-bottom: 27px !important;
-        cursor: pointer !important;
-    }
-
-    .header-content .link-nav-place .side-menu li::after {
-        margin-left: 12px;
-        content: url("../images/Chevron-Iconn.svg");
-    }
-
-    .header-content .link-nav-place .side-menu .login-section::after {
-        margin-left: 15px;
-        content: url("../images/Login-Iconn.svg");
+    .menu_header_mobile ul li i {
+        color: #868686;
         float: right;
     }
 
-    .header-content .link-nav-place .side-menu hr {
-        margin: 18px 0 22px 0;
+    .menu_header_mobile ul li:hover i {
+        color: #71B9AD !important;
+        transition: all 0.3s;
+    }
+
+    .menu_header_mobile ul .close_section {
+        background-color: #f7f7fb;
+        padding: 6% 9% 6% 9%;
+        vertical-align: middle;
+    }
+
+    .menu_header_mobile ul .back_section {
+        background-color: #f7f7fb;
+        padding: 6% 9% 6% 9%;
+        vertical-align: middle;
+    }
+
+    .close-area {
+        list-style: none;
+        padding: 0;
+        text-transform: uppercase;
+        cursor: pointer;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        background-color: rgba(0, 0, 0, 0.55) !important;
+        height: 432px !important;
+        width: 100%;
+        z-index: 3;
+        display: none;
+    }
+    
+    .menu_header {
+        width: 65%;
+        display: none;
+    }
+    
+    .menu_header li {
+        list-style: none;
+        text-transform: uppercase;
+        display: flex;
+        height: auto;
+        justify-content: space-between;
+    }
+    
+    .menu_header li a {
+        font-family: "AmpleSoft Pro";
+        font-size: 16px;
+        line-height: 25px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #868686;
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+    
+    .menu_header li a:hover {
+        font-weight: bold;
+        color: #71B9AD;
+    }
+    
+    .menu_header li span {
+        margin-left: 6px;
+        align-items: center;
+        height: auto;
+    }
+    
+    .menu_header li span img {
+        width: 15px;
+        margin-top: -2px;
+        transition: all 0.3s !important;
+    }
+    
+    .chevron-rotate {
+        transform: rotate(180deg) !important;
+        transition: all 0.3s !important;
+    }
+    
+    .menu_header .login-section span img {
+        width: 20px;
+        margin-top: -2px;
+    }
+    
+    .menu_header li hr {
         width: 2px;
+        height: 25px;
         background-color: #F4F4F9;
-        border: 0;
     }
-
-    /* Dropbar Header */
-
-        .dropbar-header {
-            width: 53%;
-            background-color: white; 
-            border-radius: 0 0 10px 10px; 
-            box-shadow: 0px 2px 10px rgb(0, 0, 0, 20%);
-            position: absolute;
-            top: 70px;
-            display: flex;
-            justify-content: space-between;
-            padding-left: 35%;
-            padding-right: 12%;
-            padding-bottom: 2%;
-        }
-
-        .side-content-dropbar {
-            margin-top: 25px;
-        }
-        
-        .dropbar-header .title-side-content {
-            font-family: "AmpleSoft Pro";
-            font-weight: 500;
-            font-size: 12px;
-            color: #464646; 
-        }
-
-        .dropbar-header hr {
-            height: 2px;
-            width: 50px;
-            background-color: #F4F4F9;
-            border: 0; 
-            margin-bottom: 8px;
-        }
-
-        .dropbar-header li {
-            list-style-type:none;
-            text-align: center;
-            margin-bottom: 8px;
-            
-            font-family: "AmpleSoft Pro";
-            font-weight: 300;
-            font-size: 10px;
-            color: #464646;   
-            cursor: pointer;  
-        }
-}
-
-@media (min-width: 1200px) { 
-    /* Header */
-
-    header {
-        width: 100%;
-        height: 90px; 
-        position: fixed;
+    
+    .list-active {
+        font-weight: bold !important;
+        color: #71B9AD !important;
     }
-
-    .header-content {
-        width: 100%;
-        height: 90px; 
+    
+    .dropbar-header {
         background-color: white; 
         border-radius: 0 0 10px 10px; 
-        box-shadow: 0px 2px 10px rgb(0, 0, 0, 20%);
-        display: flex;
-        position: fixed;
-        z-index: 2;
-    }
-
-    .header-content .logo-place {
-        width: 42%;
-    }
-
-    .header-content .logo-place img {
-        width: 170px;
-        margin: 15px 65px;
-    }
-
-    .header-content .link-nav-place  {
-        width: 58%;
-    }
-
-    .header-content .link-nav-place .side-menu {
-        display: flex;
+        box-shadow: 0px 5px 10px rgb(0, 0, 0, 20%);
+        position: relative;
+        top: 0;
+        display: none;
         justify-content: space-between;
-        list-style-type:none;
-        padding-right: 75px;
-        margin: 0;
+        padding-left: 35%;
+        padding-right: 12%;
+        padding-bottom: 2%;
+        z-index: 1;
         width: 100%;
     }
-
-    .header-content .link-nav-place .side-menu-mobile {
-        display: none;
+    
+    .side-content-dropbar {
+        margin-top: 40px;
     }
-
-    .header-content .btn-close {
-        display: none;
-    }
-
-    .header-content .btn-menu {
-        display: none;
-    }
-
-    .header-content .btn-login {
-        display: none;
-    }
-
-    .header-content .line-mobile {
-        display: none;
-    }
-
-    .header-content .link-nav-place .side-menu li {
+    
+    .dropbar-header .title-side-content {
         font-family: "AmpleSoft Pro";
         font-weight: 500;
         font-size: 16px;
-        color: #868686;
-        padding-top: 34px;
-        padding-bottom: 34px;
+        color: #464646; 
+    }
+    
+    .dropbar-header hr {
+        height: 3px;
+        width: 70px;
+        background-color: #F4F4F9;
+        border: 0; 
+        margin-bottom: 11px;
+    }
+    
+    .dropbar-header li {
+        list-style-type:none;
+        text-align: center;
+        margin-bottom: 11px;
+        
+        font-family: "AmpleSoft Pro";
+        font-weight: 300;
+        font-size: 14px;
+        color: #464646;     
+    }
+}
+
+@media (min-width: 768px) { 
+    .container {
+        max-width: 1545px;
+        height: 20000px;
+    }
+    
+    .box_layout {
+        box-shadow: 0 0 50px rgb(0 0 0 / 20%);
+    }
+    
+    .header_section {
+        box-shadow: 0 2px 10px rgb(0 0 0 / 20%);
+        border-radius: 0 0 12px 12px;
+        position: relative;
+        padding: 14px 2% 14px 2%;
+        z-index: 2;
+    }
+    
+    .logo_header .logo_name {
+        font-family: "AmpleSoft Pro";
+    }
+    
+    .logo_header .logo_name span {
+        font-size: 14px;
+        color: #707070;
+        font-weight: 400;
+        text-transform: uppercase;
+        display: inline-block;
+        margin: 12px 0 0 10px;
         letter-spacing: 1px;
-        cursor: pointer;
+        line-height: 17px;
+    }
+    
+    .logo_header .logo_name .inner_name {
+        font-size: 12px;
+        color: #71B9AD;
+        margin: 0;
     }
 
-    .header-content .link-nav-place .side-menu li:hover {
+    .nav_menu_header_mobile {
+        display: flex;
+        width: 25%;
+    }
+
+    .nav_menu_header_mobile li {
+        list-style: none;
+        text-transform: uppercase;
+        display: flex;
+        height: auto;
+        justify-content: space-between;
+    }
+    
+    .nav_menu_header_mobile li a {
+        font-family: "AmpleSoft Pro";
+        font-size: 16px;
+        line-height: 25px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #868686;
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+    
+    .nav_menu_header_mobile .login-section a::before {
+        content: 'Log in';
+    }
+
+    .nav_menu_header_mobile li a:hover {
         font-weight: bold;
         color: #71B9AD;
     }
+    
+    .nav_menu_header_mobile li span {
+        margin-left: 6px;
+        align-items: center;
+        height: auto;
+    }
+    
+    .nav_menu_header_mobile li span img {
+        width: 25px;
+        margin-top: -2px;
+        transition: all 0.3s !important;
+        cursor: pointer;
+    }
 
-    .list-active {
-        font-family: "AmpleSoft Pro" !important;
-        font-weight: 600 !important;
-        font-size: 16px !important;
+    .nav_menu_header_mobile li img {
+        cursor: pointer;
+    }
+    
+    .nav_menu_header_mobile .login-section span img {
+        width: 20px;
+        margin-top: -2px;
+    }
+    
+    .nav_menu_header_mobile li hr {
+        width: 2px;
+        height: 25px;
+        background-color: #F4F4F9;
+    }
+
+    .menu_header_mobile {
+        display: flex;
+        top: 0px !important;
+        position: absolute !important;
+        left: -300px;
+        width: 200px !important;
+        height: 432px;
+        background-color: #fff !important;
+        overflow: hidden;
+        z-index: 5;
+    }
+
+    .menu_header_mobile .container_menu_header_mobile {
+        z-index: 5;
+        position: absolute;
+        width: 5000px !important;
+        height: 432px;
+        display: flex;
+    }
+
+    .menu_header_mobile ul {
+        list-style: none;
+        padding: 0;
+        width: 200px;
+        text-transform: uppercase;
+    }
+
+    .menu_header_mobile ul li {
+        padding: 6% 9% 0 9%;
+        font-family: "AmpleSoft Pro";
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #868686;
+        cursor: pointer;
+    }
+
+    .menu_header_mobile ul li:hover {
+        font-size: 14px;
         color: #71B9AD !important;
-        padding-top: 34px !important;
-        padding-bottom: 34px !important;
-        letter-spacing: 1px !important;
-        cursor: pointer !important;
+        transition: all 0.3s;
     }
 
-    .header-content .link-nav-place .side-menu li::after {
-        margin-left: 15px;
-        content: url("../images/Chevron-Icon.svg");
+    .menu_header_mobile ul .close_section i {
+        font-size: 20px;
+        color: #868686;
+        float: left;
+        margin-top: -4px !important;
+        margin-right: 4px !important;
     }
 
-    .header-content .link-nav-place .side-menu .login-section::after {
-        margin-left: 15px;
-        content: url("../images/Login-Icon.svg");
+    .menu_header_mobile ul .back_section i {
+        font-size: 11px;
+        color: #868686;
+        float: left;
+        margin-top: 3px !important;
+        margin-right: 4px !important;
+    }
+
+    .menu_header_mobile ul .option_nav {
+        font-weight: 400 !important;
+        text-transform: capitalize;
+    }
+
+    .menu_header_mobile ul li i {
+        color: #868686;
         float: right;
     }
 
-    .header-content .link-nav-place .side-menu hr {
-        margin: 23px 0 29px 0;
-        width: 3px;
-        background-color: #F4F4F9;
-        border: 0;
+    .menu_header_mobile ul li:hover i {
+        color: #71B9AD !important;
+        transition: all 0.3s;
     }
 
-    /* Dropbar Header */
+    .menu_header_mobile ul .close_section {
+        background-color: #f7f7fb;
+        padding: 6% 9% 6% 9%;
+        vertical-align: middle;
+    }
 
-        .dropbar-header {
-            width: 53%;
-            background-color: white; 
-            border-radius: 0 0 10px 10px; 
-            box-shadow: 0px 2px 10px rgb(0, 0, 0, 20%);
-            position: absolute;
-            top: 90px;
-            display: flex;
-            justify-content: space-between;
-            padding-left: 35%;
-            padding-right: 12%;
-            padding-bottom: 2%;
-        }
+    .menu_header_mobile ul .back_section {
+        background-color: #f7f7fb;
+        padding: 6% 9% 6% 9%;
+        vertical-align: middle;
+    }
 
-        .side-content-dropbar {
-            margin-top: 40px;
-        }
+    .close-area {
+        list-style: none;
+        padding: 0;
+        text-transform: uppercase;
+        cursor: pointer;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        background-color: rgba(0, 0, 0, 0.55) !important;
+        height: 432px !important;
+        width: 100%;
+        z-index: 2;
+        display: none;
+    }
+    
+    .menu_header {
+        width: 65%;
+        display: none;
+    }
+    
+    .menu_header li {
+        list-style: none;
+        text-transform: uppercase;
+        display: flex;
+        height: auto;
+        justify-content: space-between;
+    }
+    
+    .menu_header li a {
+        font-family: "AmpleSoft Pro";
+        font-size: 16px;
+        line-height: 25px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #868686;
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+    
+    .menu_header li a:hover {
+        font-weight: bold;
+        color: #71B9AD;
+    }
+    
+    .menu_header li span {
+        margin-left: 6px;
+        align-items: center;
+        height: auto;
+    }
+    
+    .menu_header li span img {
+        width: 15px;
+        margin-top: -2px;
+        transition: all 0.3s !important;
+    }
+    
+    .chevron-rotate {
+        transform: rotate(180deg) !important;
+        transition: all 0.3s !important;
+    }
+    
+    .menu_header .login-section span img {
+        width: 20px;
+        margin-top: -2px;
+    }
+    
+    .menu_header li hr {
+        width: 2px;
+        height: 25px;
+        background-color: #F4F4F9;
+    }
+    
+    .list-active {
+        font-weight: bold !important;
+        color: #71B9AD !important;
+    }
+    
+    .dropbar-header {
+        background-color: white; 
+        border-radius: 0 0 10px 10px; 
+        box-shadow: 0px 5px 10px rgb(0, 0, 0, 20%);
+        position: relative;
+        top: 0;
+        display: none;
+        justify-content: space-between;
+        padding-left: 35%;
+        padding-right: 12%;
+        padding-bottom: 2%;
+        z-index: 1;
+        width: 100%;
+    }
+    
+    .side-content-dropbar {
+        margin-top: 40px;
+    }
+    
+    .dropbar-header .title-side-content {
+        font-family: "AmpleSoft Pro";
+        font-weight: 500;
+        font-size: 16px;
+        color: #464646; 
+    }
+    
+    .dropbar-header hr {
+        height: 3px;
+        width: 70px;
+        background-color: #F4F4F9;
+        border: 0; 
+        margin-bottom: 11px;
+    }
+    
+    .dropbar-header li {
+        list-style-type:none;
+        text-align: center;
+        margin-bottom: 11px;
         
-        .dropbar-header .title-side-content {
-            font-family: "AmpleSoft Pro";
-            font-weight: 500;
-            font-size: 16px;
-            color: #464646; 
-        }
+        font-family: "AmpleSoft Pro";
+        font-weight: 300;
+        font-size: 14px;
+        color: #464646;     
+    }
+}
 
-        .dropbar-header hr {
-            height: 3px;
-            width: 70px;
-            background-color: #F4F4F9;
-            border: 0; 
-            margin-bottom: 11px;
-        }
+@media (min-width: 992px) { 
+    .container {
+        max-width: 1545px;
+        height: 20000px;
+    }
+    
+    .box_layout {
+        box-shadow: 0 0 50px rgb(0 0 0 / 20%);
+    }
+    
+    .header_section {
+        box-shadow: 0 2px 10px rgb(0 0 0 / 20%);
+        border-radius: 0 0 12px 12px;
+        position: relative;
+        padding: 14px 2% 14px 2%;
+        z-index: 2;
+    }
+    
+    .logo_header .logo_name {
+        font-family: "AmpleSoft Pro";
+    }
+    
+    .logo_header .logo_name span {
+        font-size: 14px;
+        color: #707070;
+        font-weight: 400;
+        text-transform: uppercase;
+        display: inline-block;
+        margin: 12px 0 0 10px;
+        letter-spacing: 1px;
+        line-height: 17px;
+    }
+    
+    .logo_header .logo_name .inner_name {
+        font-size: 12px;
+        color: #71B9AD;
+        margin: 0;
+    }
 
-        .dropbar-header li {
-            list-style-type:none;
-            text-align: center;
-            margin-bottom: 11px;
-            
-            font-family: "AmpleSoft Pro";
-            font-weight: 300;
-            font-size: 14px;
-            color: #464646;     
-        }
+    .nav_menu_header_mobile {
+        display: none;
+    }
+
+    .menu_header_mobile {
+        display: none;
+    }
+    
+    .menu_header {
+        width: 65%;
+        display: flex;
+    }
+    
+    .menu_header li {
+        list-style: none;
+        text-transform: uppercase;
+        display: flex;
+        height: auto;
+        justify-content: space-between;
+    }
+    
+    .menu_header li a {
+        font-family: "AmpleSoft Pro";
+        font-size: 16px;
+        line-height: 25px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #868686;
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+    
+    .menu_header li a:hover {
+        font-weight: bold;
+        color: #71B9AD;
+    }
+    
+    .menu_header li span {
+        margin-left: 6px;
+        align-items: center;
+        height: auto;
+    }
+    
+    .menu_header li span img {
+        width: 15px;
+        margin-top: -2px;
+        transition: all 0.3s !important;
+    }
+    
+    .chevron-rotate {
+        transform: rotate(180deg) !important;
+        transition: all 0.3s !important;
+    }
+    
+    .menu_header .login-section span img {
+        width: 20px;
+        margin-top: -2px;
+    }
+    
+    .menu_header li hr {
+        width: 2px;
+        height: 25px;
+        background-color: #F4F4F9;
+    }
+    
+    .list-active {
+        font-weight: bold !important;
+        color: #71B9AD !important;
+    }
+    
+    .dropbar-header {
+        background-color: white; 
+        border-radius: 0 0 10px 10px; 
+        box-shadow: 0px 5px 10px rgb(0, 0, 0, 20%);
+        position: relative;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 35%;
+        padding-right: 12%;
+        padding-bottom: 2%;
+        z-index: 1;
+        width: 100%;
+    }
+    
+    .side-content-dropbar {
+        margin-top: 40px;
+    }
+    
+    .dropbar-header .title-side-content {
+        font-family: "AmpleSoft Pro";
+        font-weight: 500;
+        font-size: 16px;
+        color: #464646; 
+    }
+    
+    .dropbar-header hr {
+        height: 3px;
+        width: 70px;
+        background-color: #F4F4F9;
+        border: 0; 
+        margin-bottom: 11px;
+    }
+    
+    .dropbar-header li {
+        list-style-type:none;
+        text-align: center;
+        margin-bottom: 11px;
+        
+        font-family: "AmpleSoft Pro";
+        font-weight: 300;
+        font-size: 14px;
+        color: #464646;     
+    }
+}
+
+@media (min-width: 1200px) { 
+    .container {
+        max-width: 1545px;
+        height: 20000px;
+    }
+    
+    .box_layout {
+        box-shadow: 0 0 50px rgb(0 0 0 / 20%);
+    }
+    
+    .header_section {
+        box-shadow: 0 2px 10px rgb(0 0 0 / 20%);
+        border-radius: 0 0 12px 12px;
+        position: relative;
+        padding: 14px 5% 14px 5%;
+        z-index: 2;
+    }
+    
+    .logo_header .logo_name {
+        font-family: "AmpleSoft Pro";
+    }
+    
+    .logo_header .logo_name span {
+        font-size: 14px;
+        color: #707070;
+        font-weight: 400;
+        text-transform: uppercase;
+        display: inline-block;
+        margin: 12px 0 0 10px;
+        letter-spacing: 1px;
+        line-height: 17px;
+    }
+    
+    .logo_header .logo_name .inner_name {
+        font-size: 12px;
+        color: #71B9AD;
+        margin: 0;
+    }
+
+    .nav_menu_header_mobile {
+        display: none;
+    }
+
+    .menu_header_mobile {
+        display: none;
+    }
+    
+    .menu_header {
+        width: 60%;
+        display: flex;
+    }
+    
+    .menu_header li {
+        list-style: none;
+        text-transform: uppercase;
+        display: flex;
+        height: auto;
+        justify-content: space-between;
+    }
+    
+    .menu_header li a {
+        font-family: "AmpleSoft Pro";
+        font-size: 16px;
+        line-height: 25px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #868686;
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+    
+    .menu_header li a:hover {
+        font-weight: bold;
+        color: #71B9AD;
+    }
+    
+    .menu_header li span {
+        margin-left: 15px;
+        align-items: center;
+        height: auto;
+    }
+    
+    .menu_header li span img {
+        width: 15px;
+        margin-top: -2px;
+        transition: all 0.3s !important;
+    }
+    
+    .chevron-rotate {
+        transform: rotate(180deg) !important;
+        transition: all 0.3s !important;
+    }
+    
+    .menu_header .login-section span img {
+        width: 20px;
+        margin-top: -2px;
+    }
+    
+    .menu_header li hr {
+        width: 3px;
+        height: 25px;
+        background-color: #F4F4F9;
+        color: #F4F4F9;
+    }
+    
+    .list-active {
+        font-weight: bold !important;
+        color: #71B9AD !important;
+    }
+    
+    .dropbar-header {
+        background-color: white; 
+        border-radius: 0 0 10px 10px; 
+        box-shadow: 0px 5px 10px rgb(0, 0, 0, 20%);
+        position: relative;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 35%;
+        padding-right: 12%;
+        padding-bottom: 2%;
+        z-index: 1;
+        width: 100%;
+    }
+    
+    .side-content-dropbar {
+        margin-top: 40px;
+    }
+    
+    .dropbar-header .title-side-content {
+        font-family: "AmpleSoft Pro";
+        font-weight: 500;
+        font-size: 16px;
+        color: #464646; 
+    }
+    
+    .dropbar-header hr {
+        height: 3px;
+        width: 70px;
+        background-color: #F4F4F9;
+        border: 0; 
+        margin-bottom: 11px;
+    }
+    
+    .dropbar-header li {
+        list-style-type:none;
+        text-align: center;
+        margin-bottom: 11px;
+        
+        font-family: "AmpleSoft Pro";
+        font-weight: 300;
+        font-size: 14px;
+        color: #464646;     
+    }
 }
